@@ -3415,12 +3415,12 @@ $SO
 <span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(mat_rand, <span class="at">MARGIN =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, round_function)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3] [,4] [,5]
-[1,]   60  500 2000 1000   90
-[2,] 2000  300   60  900  500
-[3,]   90   80  700 2000   90
-[4,] 1000   50 2000 2000  400
-[5,]   80  300 2000 1000   20
-[6,] 2000  800 1000   90  400</code></pre>
+[1,]   10   60   90   30 1000
+[2,]  800   70  100 1000 1000
+[3,]  300 1000   20   40  600
+[4,]  700   40  800 1000 1000
+[5,] 1000 1000 1000   30 1000
+[6,]   90 2000  200  800  300</code></pre>
 </div>
 </div>
 </section>
@@ -3463,6 +3463,11 @@ $SO
 <li>Slice the data frame to only include the state of Virginia (VA).</li>
 </ul>
 <p>No need to print any output here.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>CO_max_temps <span class="ot">&lt;-</span> original_max_temps[original_max_temps<span class="sc">$</span>state <span class="sc">==</span> <span class="st">&quot;CO&quot;</span>, ]</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>OH_max_temps <span class="ot">&lt;-</span> original_max_temps[original_max_temps<span class="sc">$</span>state <span class="sc">==</span> <span class="st">&quot;OH&quot;</span>, ]</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>VA_max_temps <span class="ot">&lt;-</span> original_max_temps[original_max_temps<span class="sc">$</span>state <span class="sc">==</span> <span class="st">&quot;VA&quot;</span>, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="part-c-5-points" class="level3">
 <h3 class="anchored" data-anchor-id="part-c-5-points">Part c (5 points)</h3>

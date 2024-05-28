@@ -235,7 +235,9 @@ Create three new data frames by slicing the data by state.
 No need to print any output here.
 
 ```{r}
-
+CO_max_temps <- original_max_temps[original_max_temps$state == "CO", ]
+OH_max_temps <- original_max_temps[original_max_temps$state == "OH", ]
+VA_max_temps <- original_max_temps[original_max_temps$state == "VA", ]
 ```
 
 
