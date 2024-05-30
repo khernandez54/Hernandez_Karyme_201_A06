@@ -258,7 +258,20 @@ Example (this is NOT the answer just an example of what goes in the {}):
 Note: This code should still run successfully even if the numbers were to change.
 
 ```{r}
+med_temps <- numeric(nrow(CO_max_temps))
 
+for(i in 1:nrow(CO_max_temps)){
+  yearly_temp <- as.numeric(CO_max_temps[i, -(1:2)]) # exclude state and year cols
+  med_temps[i] <- median(yearly_temp) 
+}
+
+max_med_temp <- max(med_temps)
+min_med_temp <- min(med_temps)
+
+max_year <- CO_max_temps$year[which.max(med_temps)]
+min_year <- CO_max_temps$year[which.min(med_temps)]
+
+print(paste0("The maximum median annual temperature of ", max_med_temp, " occurred in ", max_year, " and the minimum median annual temperature of ", min_med_temp, " occurred in ", min_year,"."))
 ```
 
 
